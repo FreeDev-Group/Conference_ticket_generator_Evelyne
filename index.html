@@ -15,21 +15,23 @@
   </style>
 </head>
 <body>
-<img src="assets/images/pattern-squiggly-line-top.svg" class="img-decoration-top" alt="decoration">
+<img src="assets/images/pattern-squiggly-line-top.svg" class="decorative-image-top" alt="decoration">
 <header>
-  <div class="logo-container"><img src="assets/images/logo-full.svg" alt="" class="log"></div>
+  <div class="brand-logo"><img src="assets/images/logo-full.svg" alt="" class="log"></div>
 </header>
   <!-- Form starts -->
 <main>
   <div class="title-container">
-    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-    <p>Secure your spot at next year's biggest coding conference.</p>
+    <h1>Congrats, Full Name! Your ticket is ready.</h1>
+    <p>We've emailed your ticket to Email Address and will send updates in the run up to the event.</p>
+    <!-- <h1>Your Journey to Coding Conf 2025 Starts Here!</h1> -->
+    <!-- <p>Secure your spot at next year's biggest coding conference.</p> -->
   </div>
-  <div class="form-container">
+  <div class="ticket-form">
     <form action="">
       <div>
         <p>Upload Avatar</p>
-        <div class="upload-image-wrapper" id="drop-zone">
+        <div class="avatar-upload" id="drop-zone">
           <label for=""> 
           <img src="assets/images/icon-upload.svg" alt="">
           <input type="file" id="file-input" accept="image/png, image/jpeg" hidden>
@@ -53,40 +55,46 @@
       </label>
       <button type="submit">  Generate My Ticket</button>
     </form>
-
   </div>
-  <picture class="image-decoration-bottom">
+  <div class="ticket-preview">
+    <div class="ticket-card">
+      <img src="assets/images/pattern-ticket.svg" class="ticket-background" alt="ticket-pattern">
+
+      <div class="ticket-layout">
+        <div class="ticket-details">
+          <div class="event-info" id="ticket-date">
+            <img src="assets/images/logo-full.svg" alt="">
+            <span> Jan 31 ,2025 / Austin, TX</span>
+          </div>
+
+          <div>
+            <div class="attendee-info">
+              <div class="avatar">
+                <img src="assets/images/image-avatar.jpg" class="" alt="">
+              </div>
+
+              <div class="attendee-name">
+                <p>Jonatan Kristof</p>
+                <span>
+                  <img src="assets/images/icon-github.svg" alt="">
+                  @jonatankristof0101
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="ticket-id">#01609</p>
+
+      </div>
+    </div>
+  </div>
+  <picture class="decorative-image-bottom">
     <source media="(width>=1440px)" srcset="assets/images/pattern-squiggly-line-bottom-desktop.svg" sizes="">
     <img src="assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="">
   </picture>
 </main>
   
-
-  
-
- 
-  
-  
-
-
-
-
-  
-
-
-
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  <!-- Congrats, Full Name! Your ticket is ready. -->
-<!-- 
-  We've emailed your ticket to Email Address and will send updates in the run up to the event. -->
-
-  <!-- Coding Conf
-  Jan 31, 2025 / Austin, TX -->
-
   <footer>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
