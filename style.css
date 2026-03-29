@@ -139,11 +139,89 @@ h1{
   text-align: center;
 }
 
-.form-container {
+.ticket-form {
   width: 100%;
   z-index: 999;
 }
+.ticket-preview{
+  width: 100%;
+  display: none;
+}
+.ticket-layout{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.ticket-id{
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+  color: var(--Neutral500);
+}
+.ticket-card{
+  position: relative;
+  width: 100%;
+  margin-bottom: 30vh;
+  margin-top: 50px;
+  aspect-ratio: 345/161;
+}
+.ticket-background{
+  position: absolute;
+  width: 100%;
+}
+.attendee-name span{
+  margin-top: 0;
+}
+.ticket-details{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 15px;
+}
 
+.event-info img{
+  height: 50%;
+}
+.attendee-info{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar{
+  width: 15%;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (min-width:530px) {
+  .avatar{
+    width: 18%;
+  }
+  .attendee-info p{
+    font-size: 1.8rem;
+   
+  }
+  .attendee-info span{
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width:1440px) {
+  .avatar{
+    width: 20%;
+  }
+  .attendee-info p{
+    font-size: 2rem;
+   
+  }
+  .attendee-info span{
+    font-size: 1.5rem;
+  }
+}
 form {
   display: flex;
   flex-direction: column;
@@ -181,7 +259,7 @@ input:placeholder {
   opacity: 1;
 }
 
-.upload-image-wrapper {
+.avatar-upload {
   height: 135px;
   border: 2px dashed var(--Neutral500);
   border-radius: 10px;
@@ -192,13 +270,13 @@ input:placeholder {
   padding: 20px;
 }
 
-.upload-image-wrapper label {
+.avatar-upload label {
   padding: 10px;
   background-color: var(--Neutral700);
   border-radius: 10px;
 }
 
-.upload-image-wrapper input {
+.avatar-upload input {
   display: none;
 }
 
@@ -212,14 +290,14 @@ button {
   border:none;
 }
 
-.img-decoration-top {
+.decorative-image-top {
   position: absolute;
   right: 0;
   aspect-ratio: 446/208;
   width: 30%;
 }
 
-.image-decoration-bottom {
+.decorative-image-bottom {
   position: absolute;
   left: -15px;
   bottom: -15px;
@@ -232,13 +310,14 @@ button {
     background: url('assets/images/pattern-lines.svg'), url('assets/images/background-tablet.png');
   }
 
-  .form-container {
+  .ticket-form, .ticket-preview {
     width: 50%;
   }
 }
 
+
 @media (min-width: 1440px) {
-  .form-container {
+  .ticket-form, .ticket-preview {
     width: 33%;
   }
 }
