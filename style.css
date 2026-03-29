@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url(assets/fonts/static/Inconsolata-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url(assets/fonts/static/Inconsolata-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url(assets/fonts/static/Inconsolata-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url(assets/fonts/static/Inconsolata-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+:root {
+  --Neutral0: hsl(0, 0%, 100%);
+  --Neutral300: hsl(252, 6%, 83%);
+  --Neutral500: hsl(245, 15%, 58%);
+  --Neutral700: hsl(245, 19%, 35%);
+  --Neutral900: hsl(248, 70%, 10%);
+  --Orange500: hsl(7, 88%, 67%);
+  --Orange700: hsl(7, 71%, 60%);
+}
+
+body {
+  background-image: url('assets/images/pattern-lines.svg'), url('assets/images/background-mobile.png');
+  background-position: left, center;
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  color: var(--Neutral300);
+  font-size:20px;
+  padding: 0 15px;
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 40px auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+h1{
+  font-weight: 700;
+}
+.title-container {
+  margin-bottom: 25px;
+}
+
+.title-container h1 {
+  text-align: center;
+}
+
+.title-container p {
+  text-align: center;
+}
+
+.form-container {
+  width: 100%;
+  z-index: 999;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-bottom: 60px;
+}
+
+label {
+  display: block;
+ 
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: var(--Neutral700);
+  border: solid 1px linear-gradient(hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  border-radius: 10px;
+  outline: none;
+  color: var(--Neutral300);
+  margin-top:10px;
+  padding: 10px;
+}
+span{
+  display: flex;
+  gap: 6px;
+  font-size: 0.7em;
+  margin-top: 10px;
+}
+input:placeholder {
+  color: var(--Neutral300);
+  opacity: 1;
+}
+
+.upload-image-wrapper {
+  height: 135px;
+  border: 2px dashed var(--Neutral500);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.upload-image-wrapper label {
+  padding: 10px;
+  background-color: var(--Neutral700);
+  border-radius: 10px;
+}
+
+.upload-image-wrapper input {
+  display: none;
+}
+
+button {
+  background: var(--Orange500);
+  margin-bottom: 25px;
+  color: var(--Neutral900);
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px 0;
+  border:none;
+}
+
+.img-decoration-top {
+  position: absolute;
+  right: 0;
+  aspect-ratio: 446/208;
+  width: 30%;
+}
+
+.image-decoration-bottom {
+  position: absolute;
+  left: -15px;
+  bottom: -15px;
+  z-index: 1;
+  width: 80%;
+}
+
+@media (min-width: 751px) {
+  body {
+    background: url('assets/images/pattern-lines.svg'), url('assets/images/background-tablet.png');
+  }
+
+  .form-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form-container {
+    width: 33%;
+  }
+}
+
+@media (min-width: 1537px) {
+  body {
+    background: url('assets/images/pattern-lines.svg'), url('assets/images/background-desktop.png');
+  }
+}
