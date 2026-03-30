@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo-mark.svg">
   <link rel="stylesheet" href="style.css">
   <title>Conference ticket generator | Frontend Mentor </title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -19,39 +18,47 @@
 <header>
   <div class="brand-logo"><img src="assets/images/logo-full.svg" alt="" class="log"></div>
 </header>
-  <!-- Form starts -->
 <main>
   <div class="title-container">
-    <h1>Congrats, Full Name! Your ticket is ready.</h1>
-    <p>We've emailed your ticket to Email Address and will send updates in the run up to the event.</p>
-    <!-- <h1>Your Journey to Coding Conf 2025 Starts Here!</h1> -->
-    <!-- <p>Secure your spot at next year's biggest coding conference.</p> -->
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <p>Secure your spot at next year's biggest coding conference.</p>
   </div>
   <div class="ticket-form">
     <form action="">
       <div>
         <p>Upload Avatar</p>
         <div class="avatar-upload" id="drop-zone">
-          <label for=""> 
-          <img src="assets/images/icon-upload.svg" alt="">
-          <input type="file" id="file-input" accept="image/png, image/jpeg" hidden>
+          <label for="file-input">
+            <div class="upload-preview">
+              <img src="" alt="Selected avatar preview" class="upload-preview-image">
+            </div>
+            <div class="upload-placeholder">
+              <img src="assets/images/icon-upload.svg" class="upload-icon" alt="Upload icon">
+              <span class="upload-instruction">Drag and drop or click to upload</span>
+            </div>
+            <input type="file" id="file-input" accept="image/png, image/jpeg" hidden>
           </label>
-          Drag and drop or click to upload
+          <div class="upload-actions" hidden>
+            <button type="button" id="remove-image" class="upload-action">Remove image</button>
+            <button type="button" id="change-image" class="upload-action">Change image</button>
+          </div>
         </div>
-        <span><img src="assets/images/icon-info.svg" alt="">Upload your photo (JPG or PNG, max size: 500KB).</span>
+        <span class="field-hint has-text" id="avatar-message" aria-live="polite">Upload your photo (JPG or PNG, max size: 500KB)</span>
       </div>
       
       <label for="fullName">Full Name
-      <input type="text" name="fullName" id="fullName">
+        <input type="text" name="fullName" id="fullName">
+        <span class="field-hint" id="fullName-message" aria-live="polite"></span>
       </label>
       <label for="email">
         Email Address
         <input type="email" name="email" id="email" placeholder="example@email.com">
-        <span><img src="assets/images/icon-info.svg" alt="">Please enter a valid email address</span>
+        <span class="field-hint" id="email-message" aria-live="polite"></span>
       </label>
       <label for="gitHubUserName">
           GitHub Username
         <input type="text" name="gitHubUserName" id="gitHubUserName" placeholder="@yourusername">
+        <span class="field-hint" id="gitHubUserName-message" aria-live="polite"></span>
       </label>
       <button type="submit">  Generate My Ticket</button>
     </form>
@@ -70,7 +77,7 @@
           <div>
             <div class="attendee-info">
               <div class="avatar">
-                <img src="assets/images/image-avatar.jpg" class="" alt="">
+                <img src="assets/images/image-avatar.jpg" alt="Avatar">
               </div>
 
               <div class="attendee-name">
@@ -94,11 +101,12 @@
     <img src="assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="">
   </picture>
 </main>
+  <script src="script.js"></script>
   
   <footer>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="#">Eva Mukasa</a>.
       </div>
    </footer>
 
